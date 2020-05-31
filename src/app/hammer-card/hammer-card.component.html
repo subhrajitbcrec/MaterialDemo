@@ -1,0 +1,18 @@
+<mat-card class="example-card" [@cardAnimator]="animationState" (@cardAnimator.done)="resetAnimationState()"
+    (swipeleft)="startAnimation('slideOutLeft')" (swiperight)="startAnimation('zoomOutRight')"
+    (swipeup)="startAnimation('rotateOutUpRight')" (swipedown)="startAnimation('flipOutY')">
+
+    <mat-card-content>
+        <img class="small-image" src="https://angular.io/assets/images/logos/angular/angular.svg">
+        <p>
+            This will be a bumpy ride!!
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="startAnimation('wobble')">WOBBLE</button>
+        <button mat-raised-button color="primary" (click)="startAnimation('swing')">SWING</button>
+        <h5>Custom Events</h5>
+        <button hammertime mat-raised-button color="accent" (dblclick)="startAnimation('jello')">JELLO
+            (doubleTap)</button>
+    </mat-card-actions>
+</mat-card>

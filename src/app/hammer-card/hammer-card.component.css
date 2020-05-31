@@ -1,0 +1,6 @@
+small-image {
+  object-fit: cover;
+  /*this makes the image in src fit to the size specified below*/
+  height: 50px;
+  width: 50px;
+}
